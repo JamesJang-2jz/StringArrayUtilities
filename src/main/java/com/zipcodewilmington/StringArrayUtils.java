@@ -65,8 +65,9 @@ public class StringArrayUtils {
      * @param array array of String objects
      * @return true if the order of the array is the same backwards and forwards
      */ // TODO
+
     public static boolean isPalindromic(String[] array) {
-//        ArrayList<String> arr2 = new ArrayList<>();
+        //        ArrayList<String> arr2 = new ArrayList<>();
 //        Collections.addAll(arr2, array);
 //        ArrayList<String> arr3 = new ArrayList<>();
 //        Collections.addAll(arr3, array);
@@ -81,19 +82,27 @@ public class StringArrayUtils {
      * @return true if each letter in the alphabet has been used in the array
      */ // TODO
     public static boolean isPangramic(String[] array) {
-        
-        return false;
+        String phrase = Arrays.toString(array).toLowerCase();
+        for (char i = 'a'; i <= 'z'; i++) {
+            if (phrase.indexOf(i) == -1) {
+                return false;
+            }
+        } return true;
     }
-
     /**
      * @param array array of String objects
      * @param value value to check array for
      * @return number of occurrences the specified `value` has occurred
      */ // TODO
     public static int getNumberOfOccurrences(String[] array, String value) {
-        return 0;
+        int count = 0;
+        for (String str : array) {
+            if (str.equals(value)) {
+                count++;
+            }
+        }
+        return count;
     }
-
     /**
      * @param array         array of String objects
      * @param valueToRemove value to remove from array
