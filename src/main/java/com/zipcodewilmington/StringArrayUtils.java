@@ -4,7 +4,8 @@ package com.zipcodewilmington;
 import java.lang.reflect.Array;
 import java.util.*;
 import java.util.Arrays;
-
+import java.util.Collections;
+import org.apache.commons.lang3.ArrayUtils;
 /**
  * Created by leon on 1/29/18.
  */
@@ -96,8 +97,8 @@ public class StringArrayUtils {
      */ // TODO
     public static int getNumberOfOccurrences(String[] array, String value) {
         int count = 0;
-        for (String str : array) {
-            if (str.equals(value)) {
+        for (String s : array) {
+            if (s.equals(value)) {
                 count++;
             }
         }
@@ -109,9 +110,14 @@ public class StringArrayUtils {
      * @return array with identical contents excluding values of `value`
      */ // TODO
     public static String[] removeValue(String[] array, String valueToRemove) {
-        return null;
+        
+//        for (int i = 0; i < array.length; i++) {
+//            if (array[i].equals(valueToRemove)) {
+//                array = ArrayUtils.removeElement(array,array[i]);
+//            }
+//        }
+//        return array;
     }
-
     /**
      * @param array array of chars
      * @return array of Strings with consecutive duplicates removes
